@@ -1,0 +1,10 @@
+Apple
+Bananas
+Carrots
+Potatoes
+Tomatoes
+Cabbages
+Bread
+Cake
+Chicken
+Burger
