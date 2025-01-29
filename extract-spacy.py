@@ -6,7 +6,7 @@ nlp = spacy.load("en_core_web_sm")
 
 # Define the text to be processed
 # text = "Apple is looking at buying U.K. startup for $1 billion."
-text = "I want to withdraw 100 hong kong dollar from my account"
+text = "I want to deposit 200 hong kong dollars into my bank account."
 # Process the text with the spaCy pipeline
 doc = nlp(text)
 
@@ -16,3 +16,5 @@ json_data = json.dumps(entities, indent=4)
 
 # Print the JSON data
 print(json_data)
+
+
