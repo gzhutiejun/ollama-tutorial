@@ -1,16 +1,36 @@
-import ollama
+from ollama import chat
 import datetime
+from pydantic import BaseModel
+
+class Transaction(BaseModel):
+    currency: str
+    amount: int
+    account: str
+
+class Session(BaseModel): 
+    transaction: str
+    cancelled: bool
 
 # print(ollama.list())
 print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') +" start ")
-res = ollama.chat(
+res = chat(
     model="llama3.2",
     messages=[
         {
             "role": "user",
-            "content": "Extract data from the following text message and always answer in the following json format, including number or amount, currency, account type, transaction type and if receipt is required: I want to withdraw 600 hong kong dollars from my credit account, and print receipt"
+            "content": "don't exit the transaction",
         }
-    ]
+    ],
+    format=Session.model_json_schema()
 )
 print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') +" complete ")
 print(res["message"]["content"])
+
+'''
+    messages=[
+        {
+            "role": "user",
+            "content": "I want to withdraw 600 hong kong dollars from my credit account, and print receipt",
+        }
+    ],
+'''
