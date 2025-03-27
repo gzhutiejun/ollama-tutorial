@@ -31,6 +31,6 @@ if __name__ == "__main__":
     # Comment out the credentials line if using default authentication
     # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "path/to/your/credentials.json"
 
-    audio_file = "output1.mp3"  # Replace with your audio file path
+    audio_file = "check.mp3"  # Replace with your audio file path
     transcription = speech_to_text_google(audio_file)
     print("Transcription:", transcription)

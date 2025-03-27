@@ -12,6 +12,6 @@ def speech_to_text(audio_file):
         return f"An error occurred: {e}"
 
 if __name__ == "__main__":
-    audio_file = "test.mp3"  # Replace with your audio file path
+    audio_file = "check.mp3"  # Replace with your audio file path
     transcription = speech_to_text(audio_file)
     print("Transcription:", transcription)

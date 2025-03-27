@@ -14,6 +14,6 @@ def speech_to_text(audio_file):
 if __name__ == "__main__":
     #audio_file = "131718-customer.mp3"  # Replace with your audio file path
     # audio_file = "131134-customer.mp3"  # Replace with your audio file path
-    audio_file = "test.mp3"  
+    audio_file = "check.mp3"  
     transcription = speech_to_text(audio_file)
     print("Transcription:", transcription)

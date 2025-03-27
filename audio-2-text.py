@@ -6,7 +6,7 @@ from transformers import pipeline
 asr_pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-small")
 
 # Path to the audio file
-audio_file = "./data/output.wav"
+audio_file = "./data/cwd.wav"
 
 # Perform the transcription
 result = asr_pipeline(audio_file)
