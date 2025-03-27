@@ -18,10 +18,11 @@ res = chat(
     messages=[
         {
             "role": "user",
-            "content": "don't exit the transaction",
+            "content": "I want to withdraw 600 US dollars from my credit account, and print receipt",
         }
     ],
-    format=Session.model_json_schema()
+
+    format=Transaction.model_json_schema()
 )
 print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') +" complete ")
 print(res["message"]["content"])
